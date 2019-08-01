@@ -4,6 +4,6 @@ node{
  }
  stage ('Compile-Package'){
  def mvnHome =  tool name: 'AngularspringbootMAVEN', type: 'maven'
- sh "${MmvnHome}/bin/mvn package"
+ sh "${mvnHome}/bin/mvn package"
  }
  }
