@@ -3,7 +3,7 @@ node{
  git 'https://github.com/omkarsingru/jenkins'
  }
  stage ('Compile-Package'){
- def mvnHome =  tool name: 'AngularspringbootMAVEN', type: 'maven'
- sh "${mvnHome}/bin/mvn package"
+def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
+ bat "${mvnHome} package"
  }
  }
