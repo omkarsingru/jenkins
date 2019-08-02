@@ -11,6 +11,6 @@ def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
  bat "${mvn} test"
  }
  stage( 'deploy'){
-          deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8081')], contextPath: 'abcd', war: 'target/*.war'
+          deploy adapters: [tomcat7(credentialsId: 'manager', url: 'http://localhost:8081')], contextPath: 'final', war: 'target/*.war'
 }
  }
