@@ -6,4 +6,7 @@ node{
 def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
  bat "${mvn} package"
  }
+ stage ('test'){
+ bat "${mvn} test"
+ }
  }
